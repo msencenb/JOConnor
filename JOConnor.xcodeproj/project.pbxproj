@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBB22C9D1EF49765008AD4B3 /* JOConnor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB22C931EF49765008AD4B3 /* JOConnor.framework */; };
+		BBB22CA21EF49765008AD4B3 /* JOConnorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CA11EF49765008AD4B3 /* JOConnorTests.swift */; };
+		BBB22CA41EF49765008AD4B3 /* JOConnor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB22C961EF49765008AD4B3 /* JOConnor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBB22C9E1EF49765008AD4B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB22C8A1EF49765008AD4B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB22C921EF49765008AD4B3;
+			remoteInfo = JOConnor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBB22C931EF49765008AD4B3 /* JOConnor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JOConnor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB22C961EF49765008AD4B3 /* JOConnor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOConnor.h; sourceTree = "<group>"; };
+		BBB22C971EF49765008AD4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB22C9C1EF49765008AD4B3 /* JOConnorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JOConnorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB22CA11EF49765008AD4B3 /* JOConnorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JOConnorTests.swift; sourceTree = "<group>"; };
+		BBB22CA31EF49765008AD4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBB22C8F1EF49765008AD4B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB22C991EF49765008AD4B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB22C9D1EF49765008AD4B3 /* JOConnor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBB22C891EF49765008AD4B3 = {
+			isa = PBXGroup;
+			children = (
+				BBB22C951EF49765008AD4B3 /* JOConnor */,
+				BBB22CA01EF49765008AD4B3 /* JOConnorTests */,
+				BBB22C941EF49765008AD4B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBB22C941EF49765008AD4B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBB22C931EF49765008AD4B3 /* JOConnor.framework */,
+				BBB22C9C1EF49765008AD4B3 /* JOConnorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBB22C951EF49765008AD4B3 /* JOConnor */ = {
+			isa = PBXGroup;
+			children = (
+				BBB22C961EF49765008AD4B3 /* JOConnor.h */,
+				BBB22C971EF49765008AD4B3 /* Info.plist */,
+			);
+			path = JOConnor;
+			sourceTree = "<group>";
+		};
+		BBB22CA01EF49765008AD4B3 /* JOConnorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBB22CA11EF49765008AD4B3 /* JOConnorTests.swift */,
+				BBB22CA31EF49765008AD4B3 /* Info.plist */,
+			);
+			path = JOConnorTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BBB22C901EF49765008AD4B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB22CA41EF49765008AD4B3 /* JOConnor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BBB22C921EF49765008AD4B3 /* JOConnor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB22CA71EF49765008AD4B3 /* Build configuration list for PBXNativeTarget "JOConnor" */;
+			buildPhases = (
+				BBB22C8E1EF49765008AD4B3 /* Sources */,
+				BBB22C8F1EF49765008AD4B3 /* Frameworks */,
+				BBB22C901EF49765008AD4B3 /* Headers */,
+				BBB22C911EF49765008AD4B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JOConnor;
+			productName = JOConnor;
+			productReference = BBB22C931EF49765008AD4B3 /* JOConnor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBB22C9B1EF49765008AD4B3 /* JOConnorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB22CAA1EF49765008AD4B3 /* Build configuration list for PBXNativeTarget "JOConnorTests" */;
+			buildPhases = (
+				BBB22C981EF49765008AD4B3 /* Sources */,
+				BBB22C991EF49765008AD4B3 /* Frameworks */,
+				BBB22C9A1EF49765008AD4B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBB22C9F1EF49765008AD4B3 /* PBXTargetDependency */,
+			);
+			name = JOConnorTests;
+			productName = JOConnorTests;
+			productReference = BBB22C9C1EF49765008AD4B3 /* JOConnorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBB22C8A1EF49765008AD4B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = mattsencenbaugh;
+				TargetAttributes = {
+					BBB22C921EF49765008AD4B3 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+					};
+					BBB22C9B1EF49765008AD4B3 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = BBB22C8D1EF49765008AD4B3 /* Build configuration list for PBXProject "JOConnor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BBB22C891EF49765008AD4B3;
+			productRefGroup = BBB22C941EF49765008AD4B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBB22C921EF49765008AD4B3 /* JOConnor */,
+				BBB22C9B1EF49765008AD4B3 /* JOConnorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBB22C911EF49765008AD4B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB22C9A1EF49765008AD4B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBB22C8E1EF49765008AD4B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB22C981EF49765008AD4B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB22CA21EF49765008AD4B3 /* JOConnorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBB22C9F1EF49765008AD4B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBB22C921EF49765008AD4B3 /* JOConnor */;
+			targetProxy = BBB22C9E1EF49765008AD4B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BBB22CA51EF49765008AD4B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBB22CA61EF49765008AD4B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBB22CA81EF49765008AD4B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9RPFLM62SE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JOConnor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattsencenbaugh.JOConnor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBB22CA91EF49765008AD4B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9RPFLM62SE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JOConnor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattsencenbaugh.JOConnor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBB22CAB1EF49765008AD4B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9RPFLM62SE;
+				INFOPLIST_FILE = JOConnorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattsencenbaugh.JOConnorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBB22CAC1EF49765008AD4B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9RPFLM62SE;
+				INFOPLIST_FILE = JOConnorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattsencenbaugh.JOConnorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBB22C8D1EF49765008AD4B3 /* Build configuration list for PBXProject "JOConnor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB22CA51EF49765008AD4B3 /* Debug */,
+				BBB22CA61EF49765008AD4B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBB22CA71EF49765008AD4B3 /* Build configuration list for PBXNativeTarget "JOConnor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB22CA81EF49765008AD4B3 /* Debug */,
+				BBB22CA91EF49765008AD4B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBB22CAA1EF49765008AD4B3 /* Build configuration list for PBXNativeTarget "JOConnorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB22CAB1EF49765008AD4B3 /* Debug */,
+				BBB22CAC1EF49765008AD4B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBB22C8A1EF49765008AD4B3 /* Project object */;
+}
