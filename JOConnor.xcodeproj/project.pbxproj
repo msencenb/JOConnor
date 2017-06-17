@@ -10,6 +10,14 @@
 		BBB22C9D1EF49765008AD4B3 /* JOConnor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB22C931EF49765008AD4B3 /* JOConnor.framework */; };
 		BBB22CA21EF49765008AD4B3 /* JOConnorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CA11EF49765008AD4B3 /* JOConnorTests.swift */; };
 		BBB22CA41EF49765008AD4B3 /* JOConnor.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB22C961EF49765008AD4B3 /* JOConnor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBB22CAE1EF49E4A008AD4B3 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CAD1EF49E4A008AD4B3 /* APIServer.swift */; };
+		BBB22CAF1EF49E56008AD4B3 /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CAD1EF49E4A008AD4B3 /* APIServer.swift */; };
+		BBB22CB11EF49E71008AD4B3 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB01EF49E71008AD4B3 /* APIResponse.swift */; };
+		BBB22CB31EF49E85008AD4B3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB21EF49E85008AD4B3 /* APIRequest.swift */; };
+		BBB22CB41EF49E85008AD4B3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB21EF49E85008AD4B3 /* APIRequest.swift */; };
+		BBB22CB61EF49E9B008AD4B3 /* APIPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB51EF49E9B008AD4B3 /* APIPostData.swift */; };
+		BBB22CB71EF49E9B008AD4B3 /* APIPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB51EF49E9B008AD4B3 /* APIPostData.swift */; };
+		BBB22CB81EF49EAF008AD4B3 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB22CB01EF49E71008AD4B3 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,10 @@
 		BBB22C9C1EF49765008AD4B3 /* JOConnorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JOConnorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB22CA11EF49765008AD4B3 /* JOConnorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JOConnorTests.swift; sourceTree = "<group>"; };
 		BBB22CA31EF49765008AD4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB22CAD1EF49E4A008AD4B3 /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
+		BBB22CB01EF49E71008AD4B3 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		BBB22CB21EF49E85008AD4B3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		BBB22CB51EF49E9B008AD4B3 /* APIPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,10 @@
 			children = (
 				BBB22C961EF49765008AD4B3 /* JOConnor.h */,
 				BBB22C971EF49765008AD4B3 /* Info.plist */,
+				BBB22CAD1EF49E4A008AD4B3 /* APIServer.swift */,
+				BBB22CB01EF49E71008AD4B3 /* APIResponse.swift */,
+				BBB22CB21EF49E85008AD4B3 /* APIRequest.swift */,
+				BBB22CB51EF49E9B008AD4B3 /* APIPostData.swift */,
 			);
 			path = JOConnor;
 			sourceTree = "<group>";
@@ -195,6 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB22CAE1EF49E4A008AD4B3 /* APIServer.swift in Sources */,
+				BBB22CB31EF49E85008AD4B3 /* APIRequest.swift in Sources */,
+				BBB22CB61EF49E9B008AD4B3 /* APIPostData.swift in Sources */,
+				BBB22CB11EF49E71008AD4B3 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB22CB81EF49EAF008AD4B3 /* APIResponse.swift in Sources */,
+				BBB22CAF1EF49E56008AD4B3 /* APIServer.swift in Sources */,
+				BBB22CB41EF49E85008AD4B3 /* APIRequest.swift in Sources */,
+				BBB22CB71EF49E9B008AD4B3 /* APIPostData.swift in Sources */,
 				BBB22CA21EF49765008AD4B3 /* JOConnorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +398,7 @@
 		BBB22CAB1EF49765008AD4B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9RPFLM62SE;
 				INFOPLIST_FILE = JOConnorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +412,7 @@
 		BBB22CAC1EF49765008AD4B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9RPFLM62SE;
 				INFOPLIST_FILE = JOConnorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
