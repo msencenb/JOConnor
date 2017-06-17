@@ -1,0 +1,7 @@
+#JOConnor - Bare bones json api networking code
+
+JOConnor is a tiny wrapper around nsurlsession. Uses Swift 4's Codable implementation. 
+
+## Why is it named JOConnor
+
+Named after switchboard operator Julia O'Connor who became a labor leader in the early 20th century
