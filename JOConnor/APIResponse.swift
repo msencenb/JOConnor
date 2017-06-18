@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum APIResponse {
+public enum APIResponse {
     case success(decodable: Decodable)
     case failure(readableMessage: String, error: APIError)
 }
 
-enum APIError : Error {
+public enum APIError : Error {
     /*  Errors representing non http response errors, or errors produced from the error parameter of nsurlsession is only for client side errors.
         Server errors are represented through the status code of the http response
         see: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/NSURLSessionConcepts/NSURLSessionConcepts.html

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class APIServer {
+public class APIServer {
     let encoder = JSONEncoder()
     let session = URLSession(configuration: URLSessionConfiguration.default)
     

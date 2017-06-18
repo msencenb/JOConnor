@@ -7,7 +7,13 @@
 //
 
 import XCTest
-@testable import JOConnor
+import JOConnor
+
+class User : Authable {
+    func authorizationHeader() -> String? {
+        return "TestJWTToken"
+    }
+}
 
 class JOConnorTests: XCTestCase {
     
@@ -21,16 +27,14 @@ class JOConnorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSharedInstanceInit() {
+        let server = APIServer.sharedInstance
+        XCTAssertNotNil(server)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testAuthable() {
+        let user = User.init()
+        XCTAssertEqual("TestJWTToken", user.authorizationHeader())
     }
     
 }

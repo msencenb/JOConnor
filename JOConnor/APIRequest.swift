@@ -8,23 +8,23 @@
 
 import Foundation
 
-protocol Authable: class {
+public protocol Authable: class {
     func authorizationHeader() -> String?
 }
 
-enum APIRequestError : Error {
+public enum APIRequestError : Error {
     case initialize
     case parse
     case noData
 }
 
-enum APIRequestVerb : String {
+public enum APIRequestVerb : String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
 }
 
-struct APIRequest<T: Codable> {
+public struct APIRequest<T: Codable> {
     let absolutePath: String
     let verb: APIRequestVerb
     let decoder = JSONDecoder()
