@@ -8,16 +8,20 @@
 
 import Foundation
 
-public class APIServer {
+open class APIServer {
     let encoder = JSONEncoder()
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
-    static let sharedInstance: APIServer = {
+    public init() {
+        
+    }
+    
+    public static let sharedInstance: APIServer = {
         let instance = APIServer()
         return instance
     }()
     
-    func sendRequest<T>(_ request: APIRequest<T>, completion: @escaping ((APIResponse) -> Void)) {
+    public func sendRequest<T>(_ request: APIRequest<T>, completion: @escaping ((APIResponse) -> Void)) {
         do {
             let task = try getTaskForRequest(request, completionHandler: { (data, urlResponse, error) -> Void in
                 // This error represents an error tossed back by nsurlsession itself (before it hits the server)

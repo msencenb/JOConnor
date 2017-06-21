@@ -15,6 +15,16 @@ class User : Authable {
     }
 }
 
+class MockDecodable: Codable {
+    let id: String?
+    let content: String
+    
+    public init(id: String?, content: String) {
+        self.id = id
+        self.content = content
+    }
+}
+
 class JOConnorTests: XCTestCase {
     
     override func setUp() {
@@ -35,6 +45,11 @@ class JOConnorTests: XCTestCase {
     func testAuthable() {
         let user = User.init()
         XCTAssertEqual("TestJWTToken", user.authorizationHeader())
+    }
+    
+    func testInitializeApiRequest() {
+        let request = APIRequest<MockDecodable>.init(absolutePath: "https://localhost:3000", verb: APIRequestVerb.get, postData: nil, user: nil);
+        XCTAssertNotNil(request)
     }
     
 }

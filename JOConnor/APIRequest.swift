@@ -31,7 +31,14 @@ public struct APIRequest<T: Codable> {
     let postData: PostData?
     let user: Authable?
     
-    func initUrl() throws -> URL {
+    public init(absolutePath: String, verb: APIRequestVerb, postData: PostData?, user: Authable?) {
+        self.absolutePath = absolutePath
+        self.verb = verb
+        self.postData = postData
+        self.user = user
+    }
+    
+    public func initUrl() throws -> URL {
         if let url = URL.init(string: absolutePath) {
             return url
         } else {
@@ -39,7 +46,7 @@ public struct APIRequest<T: Codable> {
         }
     }
     
-    func jsonRequest(for user: Authable?) throws -> URLRequest {
+    public func jsonRequest(for user: Authable?) throws -> URLRequest {
         let url = try initUrl()
         let request = NSMutableURLRequest.init(url: url)
         request.httpMethod = verb.rawValue
@@ -56,7 +63,7 @@ public struct APIRequest<T: Codable> {
         return request as URLRequest
     }
     
-    func decode(from data: Data) throws -> Decodable {
+    public func decode(from data: Data) throws -> Decodable {
         return try decoder.decode(T.self, from: data)
     }
 }
