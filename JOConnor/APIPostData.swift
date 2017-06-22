@@ -10,6 +10,10 @@ import Foundation
 
 // PostData is intended to be overriden by your own Codable models, or custom Encodable wrappers
 open class PostData : Encodable {
+    public init() {
+        
+    }
+    
     open func encode(to encoder: Encoder) throws {
         
     }
