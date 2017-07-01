@@ -32,6 +32,8 @@ public struct APIRequest<T: Codable> {
     let user: Authable?
     
     public init(absolutePath: String, verb: APIRequestVerb, postData: PostData?, user: Authable?) {
+        decoder.dateDecodingStrategy = .iso8601
+
         self.absolutePath = absolutePath
         self.verb = verb
         self.postData = postData

@@ -13,7 +13,7 @@ open class APIServer {
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
     public init() {
-        
+        encoder.dateEncodingStrategy = .iso8601
     }
     
     public static let sharedInstance: APIServer = {
