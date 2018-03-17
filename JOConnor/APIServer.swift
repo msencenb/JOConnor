@@ -82,7 +82,7 @@ open class APIServer {
         case 200, 201:
             do {
                 let decodedT = try request.decode(from: data)
-                return APIResponse.success(decodable: decodedT)
+                return APIResponse.success(decodable: decodedT, rawResponse: response)
             } catch {
                 print("\(error)")
                 return APIResponse.failure(readableMessage: "We are having issues communicating with the server, please try again later", error: APIError.deserialization)
