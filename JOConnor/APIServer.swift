@@ -87,6 +87,8 @@ open class APIServer {
                 print("\(error)")
                 return APIResponse.failure(readableMessage: "We are having issues communicating with the server, please try again later", error: APIError.deserialization)
             }
+        case 204:
+            return APIResponse.success(decodable: "", rawResponse: response)
         case 400:
             return APIResponse.failure(readableMessage: "Request rejected by the server.", error: APIError.badRequest)
         case 401:
