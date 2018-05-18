@@ -65,7 +65,7 @@ open class APIServer {
         let urlRequest = try request.jsonRequest(for: request.user)
         
         switch request.verb {
-        case .get:
+        case .get, .delete:
             return session.dataTask(with: urlRequest, completionHandler: completionHandler)
         case .post, .put:
             guard let postData = request.postData else {

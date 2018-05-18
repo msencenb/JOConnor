@@ -22,6 +22,7 @@ public enum APIRequestVerb : String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
+    case delete = "DELETE"
 }
 
 public struct APIRequest<T: Codable> {
