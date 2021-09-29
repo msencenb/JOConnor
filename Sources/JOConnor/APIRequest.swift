@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Authable: class {
+public protocol Authable: AnyObject {
     func authorizationHeader() -> String?
 }
 
