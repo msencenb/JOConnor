@@ -13,6 +13,12 @@ class User : Authable {
     func authorizationHeader() -> String? {
         return "TestJWTToken"
     }
+    
+    func extraHeaders() -> [Header] {
+        return [
+            Header.init(name: "SomethingImportant", value: "1")
+        ]
+    }
 }
 
 class MockDecodable: Codable {
@@ -55,7 +61,6 @@ class SessionPostData : PostData {
 }
 
 class JOConnorTests: XCTestCase {
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -74,6 +79,7 @@ class JOConnorTests: XCTestCase {
     func testAuthable() {
         let user = User.init()
         XCTAssertEqual("TestJWTToken", user.authorizationHeader())
+        XCTAssertEqual([Header.init(name: "SomethingImportant", value: 1)], user.extraHeaders())
     }
     
     func testInitializeApiRequest() {

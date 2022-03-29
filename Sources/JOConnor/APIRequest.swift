@@ -10,6 +10,7 @@ import Foundation
 
 public protocol Authable: AnyObject {
     func authorizationHeader() -> String?
+    func extraHeaders() -> [Header]
 }
 
 public enum APIRequestError : Error {
@@ -61,6 +62,12 @@ public struct APIRequest<T: Codable> {
         
         if let token = user?.authorizationHeader() {
             request.setValue(token, forHTTPHeaderField: "Authorization")
+        }
+        
+        if let extraHeaders = user?.extraHeaders() {
+            for header in extraHeaders {
+                request.setValue(header.value, forHTTPHeaderField: header.name)
+            }
         }
         
         return request as URLRequest

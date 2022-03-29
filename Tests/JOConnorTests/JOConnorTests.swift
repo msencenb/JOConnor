@@ -6,6 +6,12 @@ class User : Authable {
     func authorizationHeader() -> String? {
         return "TestJWTToken"
     }
+    
+    func extraHeaders() -> [Header] {
+        return [
+            Header.init(name: "SomethingImportant", value: "1")
+        ]
+    }
 }
 
 class MockDecodable: Codable {
@@ -57,6 +63,9 @@ final class JOConnorTests: XCTestCase {
     func testAuthable() {
         let user = User.init()
         XCTAssertEqual("TestJWTToken", user.authorizationHeader())
+        let header = user.extraHeaders().first
+        XCTAssertEqual(header?.name, "SomethingImportant")
+        XCTAssertEqual(header?.value, "1")
     }
     
     func testInitializeApiRequest() {
