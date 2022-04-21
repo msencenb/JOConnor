@@ -10,7 +10,7 @@ import Foundation
 
 public enum APIResponse {
     case success(decodable: Decodable, rawResponse: HTTPURLResponse)
-    case failure(readableMessage: String, error: APIError, rawResponse: HTTPURLResponse?)
+    case failure(readableMessage: String, error: APIError, data: Data?)
 }
 
 public enum APIError : Error {

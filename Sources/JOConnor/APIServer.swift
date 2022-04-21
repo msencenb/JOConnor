@@ -28,21 +28,21 @@ open class APIServer {
                 guard error == nil else {
                     let error = error!
                     print("Errored out with \(error)")
-                    let response = APIResponse.failure(readableMessage: "Something went wrong before sending your request", error: APIError.clientSide, rawResponse: nil)
+                    let response = APIResponse.failure(readableMessage: "Something went wrong before sending your request", error: APIError.clientSide, data: data)
                     self.fireCompletionOnMainThread(response: response, completion: completion)
                     return
                 }
                 
                 // TODO do head :ok responses return data? Or would that throw this?
                 guard let data = data else {
-                    let response = APIResponse.failure(readableMessage: "No data sent back", error: APIError.noData, rawResponse: nil)
+                    let response = APIResponse.failure(readableMessage: "No data sent back", error: APIError.noData, data: data)
                     self.fireCompletionOnMainThread(response: response, completion: completion)
                     return
                 }
                 
                 // We are only able to parse this if we can do so as an httpurlresponse to read status codes properly
                 guard let urlResponse = urlResponse as? HTTPURLResponse else {
-                    let response = APIResponse.failure(readableMessage: "Non http response received", error: APIError.nonHttp, rawResponse: nil)
+                    let response = APIResponse.failure(readableMessage: "Non http response received", error: APIError.nonHttp, data: data)
                     self.fireCompletionOnMainThread(response: response, completion: completion)
                     return
                 }
@@ -54,10 +54,10 @@ open class APIServer {
             task.resume()
         } catch APIRequestError.initialize {
             print("Failed initialization")
-            completion(APIResponse.failure(readableMessage: "Please try again later", error: APIError.initialization, rawResponse: nil))
+            completion(APIResponse.failure(readableMessage: "Please try again later", error: APIError.initialization, data: nil))
         } catch {
             print("Encoding probably failed")
-            completion(APIResponse.failure(readableMessage: "Please try again later", error: APIError.initialization, rawResponse: nil))
+            completion(APIResponse.failure(readableMessage: "Please try again later", error: APIError.initialization, data: nil))
         }
     }
     
@@ -85,22 +85,22 @@ open class APIServer {
                 return APIResponse.success(decodable: decodedT, rawResponse: response)
             } catch {
                 print("\(error)")
-                return APIResponse.failure(readableMessage: "We are having issues communicating with the server, please try again later", error: APIError.deserialization, rawResponse: response)
+                return APIResponse.failure(readableMessage: "We are having issues communicating with the server, please try again later", error: APIError.deserialization, data: data)
             }
         case 204:
             return APIResponse.success(decodable: "", rawResponse: response)
         case 400:
-            return APIResponse.failure(readableMessage: "Request rejected by the server.", error: APIError.badRequest, rawResponse: response)
+            return APIResponse.failure(readableMessage: "Request rejected by the server.", error: APIError.badRequest, data: data)
         case 401:
-            return APIResponse.failure(readableMessage: "Your credentials are not valid. Please double check that you have entered your info in correctly and try again.", error: APIError.unauthenticated, rawResponse: response)
+            return APIResponse.failure(readableMessage: "Your credentials are not valid. Please double check that you have entered your info in correctly and try again.", error: APIError.unauthenticated, data: data)
         case 403:
-            return APIResponse.failure(readableMessage: "You are not allowed to perform this action. Please contact your WrestlingIQ admin.", error: APIError.unauthorized, rawResponse: response)
+            return APIResponse.failure(readableMessage: "You are not allowed to perform this action. Please contact your WrestlingIQ admin.", error: APIError.unauthorized, data: data)
         case 500:
-            return APIResponse.failure(readableMessage: "Internal server error occured, please try again later.", error: APIError.internalServer, rawResponse: response)
+            return APIResponse.failure(readableMessage: "Internal server error occured, please try again later.", error: APIError.internalServer, data: data)
         case 503:
-            return APIResponse.failure(readableMessage: "We are temporarily unable to handle your request. Please try again later.", error: APIError.serviceUnavailable, rawResponse: response)
+            return APIResponse.failure(readableMessage: "We are temporarily unable to handle your request. Please try again later.", error: APIError.serviceUnavailable, data: data)
         default:
-            return APIResponse.failure(readableMessage: "Unknown error", error: APIError.unknown, rawResponse: nil)
+            return APIResponse.failure(readableMessage: "Unknown error", error: APIError.unknown, data: data)
         }
     }
     
