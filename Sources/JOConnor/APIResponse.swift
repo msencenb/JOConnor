@@ -10,7 +10,7 @@ import Foundation
 
 public enum APIResponse {
     case success(decodable: Decodable, rawResponse: HTTPURLResponse)
-    case failure(readableMessage: String, error: APIError)
+    case failure(readableMessage: String, error: APIError, rawResponse: HTTPURLResponse?)
 }
 
 public enum APIError : Error {
@@ -27,7 +27,8 @@ public enum APIError : Error {
     
     // Errors for http status codes
     case badRequest // 400
-    case unauthorized // 401
+    case unauthenticated // 401
+    case unauthorized // 403
     case internalServer // 500
     case serviceUnavailable // 503
     case unknown // general bucket
