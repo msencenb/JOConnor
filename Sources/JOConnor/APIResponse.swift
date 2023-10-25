@@ -29,6 +29,7 @@ public enum APIError : Error {
     case badRequest // 400
     case unauthenticated // 401
     case unauthorized // 403
+    case unprocessable // 422
     case internalServer // 500
     case serviceUnavailable // 503
     case unknown // general bucket

@@ -95,6 +95,8 @@ open class APIServer {
             return APIResponse.failure(readableMessage: "Your credentials are not valid. Please double check that you have entered your info in correctly and try again.", error: APIError.unauthenticated, data: data)
         case 403:
             return APIResponse.failure(readableMessage: "You are not allowed to perform this action. Please contact your WrestlingIQ admin.", error: APIError.unauthorized, data: data)
+        case 422:
+            return APIResponse.failure(readableMessage: "Unable to process request", error: APIError.unprocessable, data: data)
         case 500:
             return APIResponse.failure(readableMessage: "Internal server error occured, please try again later.", error: APIError.internalServer, data: data)
         case 503:
