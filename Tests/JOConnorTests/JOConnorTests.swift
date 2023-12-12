@@ -69,7 +69,7 @@ final class JOConnorTests: XCTestCase {
     }
     
     func testInitializeApiRequest() {
-        let request = APIRequest<MockDecodable>.init(absolutePath: "https://localhost:3000", verb: APIRequestVerb.get, postData: nil, user: nil);
+        let request = APIRequest<MockDecodable>.init(absolutePath: "https://localhost:3000", verb: APIRequestVerb.get, postData: nil, user: nil, decodingStrategy: nil);
         XCTAssertNotNil(request)
     }
     
